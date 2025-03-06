@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cloak Clever</title>
+    <title>Clever</title>
+    <link rel="icon" href="https://www.clever.com/favicon.ico">
     <script>
-        function cloakClever() {
-            let newTab = window.open("about:blank", "_blank");
-            let doc = newTab.document;
-            doc.write(`<meta http-equiv="refresh" content="0; url=https://www.clever.com/">`);
-            doc.close();
+        function loadGames() {
+            document.body.innerHTML = '<iframe src="https://your-game-site.com" style="position:fixed;top:0;left:0;width:100vw;height:100vh;border:none;"></iframe>';
         }
     </script>
 </head>
-<body>
-    <button onclick="cloakClever()">Open Cloaked Clever</button>
+<body onload="loadGames()">
+    <h1>Loading Clever...</h1>
 </body>
 </html>
