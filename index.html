@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cloak Redirect</title>
+    <script>
+        function cloakRedirect(url) {
+            let newTab = window.open("about:blank", "_blank");
+            let doc = newTab.document;
+            doc.write(`<meta http-equiv="refresh" content="0; url=${url}">`);
+            doc.close();
+        }
+    </script>
+</head>
+<body>
+    <button onclick="cloakRedirect('https://example.com')">Go to Site</button>
+</body>
+</html>
