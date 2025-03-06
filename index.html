@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Redirecting...</title>
+    <title>Cloak Clever</title>
     <script>
-        function openCloaked(url) {
-            let win = window.open();
-            win.document.write(`<iframe src="${url}" style="width:100vw;height:100vh;border:none;"></iframe>`);
+        function cloakClever() {
+            let newTab = window.open("about:blank", "_blank");
+            let doc = newTab.document;
+            doc.write(`<meta http-equiv="refresh" content="0; url=https://www.clever.com/">`);
+            doc.close();
         }
     </script>
 </head>
 <body>
-    <button onclick="openCloaked('https://example.com')">Open Cloaked Site</button>
+    <button onclick="cloakClever()">Open Cloaked Clever</button>
 </body>
 </html>
